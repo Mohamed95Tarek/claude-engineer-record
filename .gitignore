@@ -1,0 +1,9 @@
+# A user's own record must never be committed. It holds internal repository
+# names, commit hashes and personal weakness scores.
+record.md
+record.archived-*.md
+record.*.md
+*.record.md
+Engineer_Record_*.md
+
+.DS_Store

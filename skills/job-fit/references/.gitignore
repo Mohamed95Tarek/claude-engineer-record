@@ -1,0 +1,8 @@
+# Personal engineering record and any archived snapshot.
+# Contains unfixed defects in production code, internal repo names and commit
+# hashes, and personal weakness scores. Never publish.
+# The publishable artifact is build-record/references/record-template.md.
+record.md
+record.archived-*.md
+record.*.md
+*.record.md
