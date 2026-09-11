@@ -36,7 +36,15 @@ it is.
 
 Produce exactly these parts, in this order:
 
-1. **Fit score** — one number out of 10, with a one-line reason.
+1. **Fit score** — two numbers, never one: **fit today** and **fit after the prep in item 6**,
+   with a one-line reason. Then state whether the gaps are *closable* or *capped*.
+
+   A single number reads as a verdict when it is only a snapshot. Two roles can both score 5.5
+   today and deserve opposite advice — one because every gap closes with study and a pushed
+   artifact, the other because the binding requirement is years of experience in a role the
+   candidate has never held. Say which kind it is in the same breath as the number.
+
+   Format: `Fit today: X/10 · after ~Nh: Y/10 · gaps: closable | capped`
 2. **Requirement table** — one row per JD requirement: requirement · what the record holds · mark.
    Every 🟢 row names its evidence.
 3. **What gets the interview** — the two or three strongest matches, tied to the employer's stated
@@ -59,6 +67,11 @@ Produce exactly these parts, in this order:
   shipped artifact does not clear a blocked claim — both facts go in the row.
 - **A score is not a probability.** "6.5/10 fit" means the requirements partially match. Say that
   rather than implying a hiring chance.
+- **A score is not a recommendation either.** The highest-scoring role is often the wrong target —
+  a strong match to a role a level below the candidate is a band reset that follows them into
+  every later negotiation. Weigh title against the record's own career-stage rating in §1, and
+  say so in the verdict. Where a lower score has closable gaps and a higher one is a level down,
+  recommend the lower score and explain why.
 - **Flag anything the record marks for verification** — a PR that shows merged but whose code is
   absent from the current checkout, an axis marked stale — before using it to support a row.
 - **Surface an open gate when the JD touches it.** Where a JD asks for something §7 lists as not
@@ -83,5 +96,7 @@ Leave `SKILL.md` alone unless the output contract itself should change.
 | Treating ⚪ as 🔴 | Unmeasured means unknown. Say unknown |
 | Inflating a 🟡 because adjacent experience exists | MongoDB in 2019 is not MongoDB now. Say when the experience is old |
 | Reporting a fit score as a hiring probability | Separate items 1 and 5 of the output contract |
+| Printing one fit number | Always print fit-today and fit-after-prep. One number hides whether the gaps move |
+| Recommending the highest score | Check the title against §1's career stage. A high fit one level down is a demotion |
 | Recommending prep that only produces a talking point | Prefer prep that ends in a committed artifact |
 | Running repeated fit checks instead of closing a gap | Scoring five JDs moves no axis. If the prep converges on the same tracks, say so and stop |
