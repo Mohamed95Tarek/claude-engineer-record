@@ -53,11 +53,11 @@ Each also fires from plain English — *"what are my weaknesses"*, *"I got AWS c
 ## Install
 
 ```bash
-git clone https://github.com/<you>/engineer-record.git
-ln -s "$PWD/engineer-record/skills/record-build" ~/.claude/skills/record-build
-ln -s "$PWD/engineer-record/skills/record-show"  ~/.claude/skills/record-show
-ln -s "$PWD/engineer-record/skills/record-add"   ~/.claude/skills/record-add
-ln -s "$PWD/engineer-record/skills/job-fit"      ~/.claude/skills/job-fit
+git clone https://github.com/Mohamed95Tarek/claude-engineer-record.git
+ln -s "$PWD/claude-engineer-record/skills/record-build" ~/.claude/skills/record-build
+ln -s "$PWD/claude-engineer-record/skills/record-show"  ~/.claude/skills/record-show
+ln -s "$PWD/claude-engineer-record/skills/record-add"   ~/.claude/skills/record-add
+ln -s "$PWD/claude-engineer-record/skills/job-fit"      ~/.claude/skills/job-fit
 ```
 
 Then run `/record-build` in Claude Code.
