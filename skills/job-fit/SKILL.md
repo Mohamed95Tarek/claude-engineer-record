@@ -45,6 +45,21 @@ Produce exactly these parts, in this order:
    candidate has never held. Say which kind it is in the same breath as the number.
 
    Format: `Fit today: X/10 · after ~Nh: Y/10 · gaps: closable | capped`
+
+   **Show the weighting.** A fit score is never a row count — a role with three gaps that are the
+   whole job scores lower than one with eight peripheral gaps. State the buckets, their weight,
+   and the score in each, so the reader can disagree with the weighting rather than with the
+   number:
+
+   | Bucket | Weight | Score | Contribution |
+   |---|---|---|---|
+   | What the JD calls pivotal / names first | 35% | 1/10 | 0.35 |
+   | Everything else | 65% | 8/10 | 5.2 |
+
+   Weight by where the JD puts a requirement, not by how many words it spends: an opening-paragraph
+   "expertise in X is pivotal" outranks a bullet in a list, and anything marked "is a plus" is
+   near-zero weight. Where the weighting is the whole judgment, **give the range it produces** —
+   "hard gate → 5.5, strongly-preferred → 6.6" — and say which reading you took and why.
 2. **Requirement table** — one row per JD requirement: requirement · what the record holds · mark.
    Every 🟢 row names its evidence.
 3. **What gets the interview** — the two or three strongest matches, tied to the employer's stated
@@ -97,6 +112,8 @@ Leave `SKILL.md` alone unless the output contract itself should change.
 | Inflating a 🟡 because adjacent experience exists | MongoDB in 2019 is not MongoDB now. Say when the experience is old |
 | Reporting a fit score as a hiring probability | Separate items 1 and 5 of the output contract |
 | Printing one fit number | Always print fit-today and fit-after-prep. One number hides whether the gaps move |
+| Counting rows instead of weighting them | Three gaps that are the whole job beat eight peripheral ones. Show the buckets |
+| Hiding the weighting | If the score turns on one judgment call, show the range that judgment produces |
 | Recommending the highest score | Check the title against §1's career stage. A high fit one level down is a demotion |
 | Recommending prep that only produces a talking point | Prefer prep that ends in a committed artifact |
 | Running repeated fit checks instead of closing a gap | Scoring five JDs moves no axis. If the prep converges on the same tracks, say so and stop |
