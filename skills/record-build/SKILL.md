@@ -114,6 +114,12 @@ that you excluded it rather than listing what was there.
 ```bash
 git -C "$repo" remote get-url origin    # empty output → local only → not evidence
 git log --format='%an|%ae' | sort | uniq -c | sort -rn     # per repo
+
+# Measure the code, not the log — a 2-commit repo can be a whole application
+gh api "repos/$owner/$repo/git/trees/HEAD?recursive=1" --jq \
+  '[.tree[] | select(.path | test("^app/(Models|Http/Controllers)/.*\\.php$"))] | length'
+gh api "repos/$owner/$repo/git/trees/HEAD?recursive=1" --jq \
+  '[.tree[] | select(.path | test("^database/migrations/"))] | length'
 ```
 
 Practice projects and study exercises are the usual local-only case. They belong in a study
@@ -134,6 +140,8 @@ owns. Then find the work that carries a claim.
 |---|---|
 | `git blame` is not authorship | A day-one bulk scaffold commit (whole lockfile, thirty classes at once) is a repo migration, not original design. Check the PR trail for who refined it afterwards |
 | Volume is not ownership | 2–6 commits in one week and untouched since is migration noise. Sustained commits across months is ownership |
+| **Commit count is not code volume** | A two-commit repository can hold a complete application. Measure the tree — controllers, models, migrations, file count — before calling a repo thin. In the founding session this error dismissed two substantial Laravel apps and wrongly marked an entire CV role unverified |
+| **Watch for snapshot pushes** | Many commits sharing one commit date while their messages carry earlier dates means the author backed up work in batches. Trust the message dates and the code, not the log density |
 | Check review trails separately | Reviewing, approving and merging others' PRs is a different axis from authoring. A silent approval is merge gatekeeping, not review |
 | Absence in git is not absence of skill | Teaching, pairing, design discussions and verbal direction leave no commits. Ask before scoring a people axis at zero |
 
